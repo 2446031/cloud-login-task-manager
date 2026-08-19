@@ -1,0 +1,109 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;
+}
+
+
+/* Login/Register */
+
+.container {
+    width: 350px;
+    margin: 80px auto;
+    padding: 30px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #aaa;
+    text-align: center;
+}
+
+
+input,
+textarea {
+    width: 90%;
+    padding: 12px;
+    margin: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+
+textarea {
+    height: 80px;
+}
+
+
+button {
+    width: 95%;
+    padding: 12px;
+    margin: 10px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+button:hover {
+    background-color: #555;
+}
+
+
+a {
+    text-decoration: none;
+}
+
+
+/* Dashboard */
+
+.dashboard {
+    width: 90%;
+    max-width: 1000px;
+    margin: 30px auto;
+}
+
+
+.header {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.add-task {
+    background-color: white;
+    padding: 25px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+
+.tasks {
+    background-color: white;
+    padding: 25px;
+    border-radius: 10px;
+}
+
+
+.task-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 15px 0;
+}
+
+
+.task-card h3 {
+    margin-top: 0;
+}
+
+
+.actions a {
+    margin-right: 15px;
+}

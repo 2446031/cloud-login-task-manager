@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Edit Task</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Edit Task</h1>
+
+    <form method="POST">
+
+        <input
+            type="text"
+            name="title"
+            value="{{ task[1] }}"
+            required>
+
+        <textarea
+            name="description">{{ task[2] }}</textarea>
+
+        <button type="submit">
+            Update Task
+        </button>
+
+    </form>
+
+    <br>
+
+    <a href="{{ url_for('dashboard') }}">
+        Back to Dashboard
+    </a>
+
+</div>
+
+</body>
+
+</html>

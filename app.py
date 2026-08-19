@@ -5,7 +5,10 @@ from werkzeug.security import generate_password_hash, check_password_hash
 
 app = Flask(__name__)
 
-# Secret key for sessions
+# -------------------------------------------------
+# SECRET KEY
+# -------------------------------------------------
+
 app.secret_key = os.environ.get(
     "SECRET_KEY",
     "my_cloud_login_secret_key"
@@ -325,15 +328,21 @@ def logout():
 
 
 # -------------------------------------------------
+# INITIALIZE DATABASE
+# -------------------------------------------------
+
+# Important for Azure/Gunicorn.
+# This runs when the Flask application starts.
+init_db()
+
+
+# -------------------------------------------------
 # RUN APPLICATION
 # -------------------------------------------------
 
 if __name__ == "__main__":
 
-    # Initialize database
-    init_db()
-
-    # Render/cloud deployment configuration
+    # Azure/Cloud deployment port
     port = int(os.environ.get("PORT", 5000))
 
     app.run(
